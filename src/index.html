@@ -1,14 +1,113 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="index.js" type="module"></script>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UFT-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gracias por tu compra</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <main class= "container"> 
+      <section class="card" id="card">
+         <section class= "front">
+            <section class= "logo-brand" id="logo-brand">
+               <img src="/img/visa.png" alt="">
+            </section>
+            <img src="img/CHIP.png" class="chip" alt="">
+            <section class=" data">
+               <section class="group" id="number">
+                  <p class="label">Number card</p>
+                  <p class="number">#### #### #### ####</p>
+               </section>
+               <section class="flexbox">
+               <section class="group" id="name">
+                  <p class="label">Name card</p>
+                  <p class="name">- - - - - - - - -</p>
+               </section>
+
+               <section class="group" id="expiration">
+                  <p class="label">Expiration</p>
+                  <p class="expiration"><span class="month">MM</span> / <span class="year">AA</span></p>
+               </section>
+            </section>
+             </section>
+            </section>
+
+         <section class="back">
+               <section class = "magnetic-bar"></section>
+               <section class ="data">
+                  <section class ="group" id="Signature">
+                     <p class ="label">Signature</p>
+                     <section class="Signature"><p></p></section>
+                  </section>
+                  <section class="group" id="cvv">
+                     <p class="label">CVV</p>
+                     <p class="cvv"></p>
+                  </section>                  
+               </section>
+                  <p class="caption">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus tenetur deserunt ab quo voluptatem qui amet,
+               sint ad earum culpa voluptate consectetur magnam esse alias dolorem dolorum, hic quae ut.</p>
+                  <a href="#" class="link-bank">www.tubanco.com</a>
+            </section>
+
+      </section>  
+
+      <!-- cointainer button-->
+
+      <section class= "container-btn">
+            <button class="btn-open-form" id="btn-open-form">
+               <i class="fa-sharp fa-light fa-octagon-check" style="color: #987682;"></i>
+            </button>   
+      </section>
+
+      <!---form-->
+      
+      <form action="" id="card-form" class="card-form">
+            <section class="group">
+                  <label for="inputNumber">Card Number</label>
+                  <input type="text" id="inputNumber" maxlength="19" autocomplete="off">
+                  <!--<input type="password" id = "number" maxlength="19" autocomplete="off">
+                  <p id= "secretNumber" ></p> ---->
+            </section>
+            <section class="group">
+               <label for= "inputName">Name</label>
+               <input type="text" id="inputName" maxlength="30" autocomplete="off">
+            </section>
+            <section class="flexbox">
+                  <section class="group expires">
+                        <label for="selectMonth">Expiration</label>
+                        <section class="flexbox">
+                              <section class="group-select">
+                                    <select name="Month" id="selectMonth">
+                                          <option disabled selected>Month</option>
+                                    </select>
+                                    <i class="fas fa-angle-down"></i>
+                              </section>
+                              <section class="group-select">
+                                    <select name="year" id="selectYear">
+                                          <option disabled selected>Year</option>
+                                    </select>
+                                    <i class="fas fa-angle-down"></i>
+                              </section>
+                        </section>
+
+                  </section>
+
+               <aside class="group cvv">
+                  <label for="inputCVV">cvv</label>
+                  <input type="text" id="inputCVV" maxlength="3">
+               </aside>
+
+            </section>
+            <button type="submit" class="btn-send" id="btn-send" onclick="Isvalid()">Send</button>
+
+      </form>
+     
+   </main>
+     <script src="https://kit.fontawesome.com/2f508755f0.js" crossorigin="anonymous"></script>
+     <script src="index.js" type="module"></script>
+</body> 
 </html>
+    

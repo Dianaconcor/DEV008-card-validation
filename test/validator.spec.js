@@ -6,21 +6,21 @@ describe('validator', () => {
     expect(typeof validator).toBe('object');
   });
 
-  describe('validator.isValid', () => {
+  describe('validator.Isvalid', () => {
     it('debería ser una función', () => {
-      expect(typeof validator.isValid).toBe('function');
+      expect(typeof validator.Isvalid).toBe('function');
     });
 
     it('debería retornar true para "4083952015263"', () => {
-      expect(validator.isValid('4083952015263')).toBe(true);
+      expect(validator.Isvalid('4083952015263')).toBe(true);
     });
 
     it('debería retornar true para "79927398713"', () => {
-      expect(validator.isValid('79927398713')).toBe(true);
+      expect(validator.Isvalid('79927398713')).toBe(true);
     });
 
     it('debería retornar false para "1234567890"', () => {
-      expect(validator.isValid('1234567890')).toBe(false);
+      expect(validator.Isvalid('1234567890')).toBe(false);
     });
   });
 

@@ -1,0 +1,280 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #EAE0DA;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    padding: 40px 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*------- ESTILO GENERAL DE LA TARJETA------*/
+
+.card {
+    width: 100%;
+    max-width: 550px;
+    position: relative;
+    color: #fff;
+    transition: .3s ease all;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    /*backface-visibility: hidden;*/
+    cursor: pointer;
+    z-index: 2;
+    /*background: #7d8994;*/
+}
+
+.card.active {
+    transform: rotateY(180deg);
+}
+
+.card>section {
+    padding: 30px;
+    border-radius: 15px;
+    min-height: 315px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10pz 0 #040404(90, 116, 148, 0.3);
+}
+
+/*----- PARTE FRONTAL DE LA TARJETA -----*/
+
+.card .front {
+    width: 100%;
+    background: url(../img/img2.jpeg);
+    background-size: cover;
+}
+
+.front .logo-brand {
+    text-align: right;
+    min-height: 100px;
+}
+
+.front .logo-brand img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 80px;
+}
+
+.front .chip {
+    width: 100%;
+    max-width: 50px;
+    margin-bottom: 20px;
+}
+
+.front .group .label {
+    font-size: 16px;
+    color: #232327;
+    margin-bottom: 5px;
+}
+
+.front .group .number,
+.front .group .name,
+.front .group .expiration {
+    color: #fff;
+    font-size: 19px;
+    text-transform: uppercase;
+}
+
+.front .flexbox {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/*------ PARTE DE ATRAS DE LA TARJETA*/
+
+.back {
+    background: url(../img/img2.jpeg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.back .magnetic-bar {
+    height: 40px;
+    background: #472D2D;
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+
+.back .data {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.back .data p {
+    margin-bottom: 5px;
+}
+
+.back .data #Signature {
+    width: 70%;
+}
+
+.back .data #Signature .Signature {
+    height: 40px;
+    background: repeating-linear-gradient(#B0A4A4 0, #B0A4A4 5px, white 5px, white 8px);
+}
+
+.back .data #Signature .Signature p {
+    line-height: 40px;
+    font-family: 'Liu Jian Mao Cao', cursive;
+    color: #000;
+    font-size: 30px;
+    padding: 0 10px;
+    text-transform: capitalize;
+}
+
+.back .data #cvv {
+    width: 12%;
+}
+
+.back .data #cvv .cvv {
+    background: #fff;
+    height: 30px;
+    color: #000;
+    padding: 8px;
+    text-align: center;
+
+}
+
+.back .caption {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.back .link-bank {
+    font-size: 14px;
+    color: #F4EEE0
+}
+
+/*----- BUTTON ---- */
+
+.container-btn .btn-open-form {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 20px;
+    background: #A77979;
+    color: #B0A4A4;
+    position: relative;
+    top: -25px;
+    z-index: 3;
+    border-radius: 100%;
+    box-shadow: -5px 4px 8px #DAE2B6(24, 56, 182, 0.4);
+    padding: 5px;
+    transition: all .2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.container-btn .btn-open-form:hover {
+    background: #B0A4A4;
+}
+
+.container-btn .btn-open-form {
+    transform: rotateY(45deg);
+}
+
+/*----CARD FORM----*/
+
+.card-form {
+    background: #fff;
+    width: 100%;
+    max-width: 700px;
+    padding: 150px 30px 30px 30px;
+    border-radius: 10px;
+    position: relative;
+    top: -150px;
+    z-index: 1;
+    clip-path: polygon(0 0,100% 0, 100% 0, 0 0);
+    transition: clip-path .3s ease-out;
+}
+
+.card-form {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.card-form label {
+    display: block;
+    color: #957777;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.card-form input,
+.card-form select,
+.btn-send {
+    border: 2px solid #704F4F;
+    font-size: 18px;
+    height: 50px;
+    width: 100%;
+    padding: 5px 12px;
+    transition: .3s ease all;
+    border-radius: 5px;
+
+}
+
+.card-form input:hover
+.card-form section:hover {
+    border: 2px solid #704F4F;
+}
+
+.card-form input:focus,
+.card-form select {
+    outline: rgb(4,4,4);
+    box-shadow: 1px 7px 10px -5px rgba(90,116,148,0.3);
+}
+
+.card-form input {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.card-form .flexbox{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-form .expiration{
+    width: 100%;
+}
+
+.card-form .cvv {
+    min-width:100px;
+}
+
+.card-form .group-select {
+    width: 100%;
+    margin-right: 15px;
+    position: relative;
+}
+
+.card-form .btn-send {
+    border: none;
+    padding: 10px;
+    font-size: 22px;
+    color:#5F264A;
+    background: #B0A4A4;
+    box-shadow: 2px 2px 10px 0px rgba(0,85,212, 0.4);
+cursor: pointer;
+
+}
